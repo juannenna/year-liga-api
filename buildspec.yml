@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Node Modules...
+      - npm install --production
+      - npm install -g serverless
+  build:
+    commands:
+      - echo Build started
+      - serverless deploy --stage prod
